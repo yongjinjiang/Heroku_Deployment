@@ -52,8 +52,10 @@ def send_an_email(file_name,subject="sending email with attachments",\
     
     #except:
     #   print ("Error: unable to send email")
-    except:
-          print ("Error in sending email")
+#https://stackoverflow.com/questions/13957829/how-to-use-raise-keyword-in-python
+#https://www.youtube.com/watch?v=b0PAVVchc7c
+    except Exception as e:
+          print (e)
     finally:
         pass
           
