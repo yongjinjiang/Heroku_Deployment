@@ -16,11 +16,12 @@ PASSWORD= os.environ.get("PASSWORD")
 # body = 'Hi there, we are sending this email from Python!'
 ### Function to send the email ###
 def send_an_email(file_name,subject="sending email with attachments",\
-            body='Hi there, we are sending this email from Python!'):
+            body='from Python!'):
     #global subject,body
     ##add xander and jeff's emails here:
 
-    toaddr_s = ['yjjiangphysics@gmail.com','Kreitzer.gr@gmail.com'] 
+    toaddr_s = ['yjjiangphysics@gmail.com']
+    #,'Kreitzer.gr@gmail.com'] 
     me =  EMAIL_ADDRESS
     msg = MIMEMultipart()
     msg['Subject'] = subject
