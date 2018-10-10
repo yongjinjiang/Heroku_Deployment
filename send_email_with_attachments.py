@@ -49,6 +49,7 @@ def send_an_email(file_name,subject="sending email with attachments",\
        #s.send_message(msg)
        aa=[s.sendmail(me, toaddr, msg.as_string()) for toaddr in toaddr_s]
        s.quit()
+       
     #except:
     #   print ("Error: unable to send email")
     except:
@@ -56,5 +57,6 @@ def send_an_email(file_name,subject="sending email with attachments",\
     finally:
         pass
           
+
 # file="..//try.html"
 # send_an_email(file)
