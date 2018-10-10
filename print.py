@@ -5,17 +5,18 @@ i=0
 while i<1000:
    i+=1
    print(i) 
+   
    time.sleep(1)
 
    if i%50==0:
-        file = open('test.txt','w')         
-        file.write(f'Hello World,  {i}') 
-        file.write(r'This is our new text file1') 
-        file.write(r'and this is another line.') 
-        file.write(r'Why? Because we can.') 
-        file.close() 
+        f= open('test.txt','w')         
+        f.write(f'Hello World,  {i}') 
+        f.write(r'This is our new text file1') 
+        f.write(r'and this is another line.') 
+        f.write(r'Why? Because we can.') 
+        f.close() 
 
         subject = f"haha {i}"
-        body = 'Hi there, I am sending this email from Python!'
+        body = 'Hi there, I am sending this email from Heroku!'
         send_an_email('test.txt',subject=subject,body=body)
 
