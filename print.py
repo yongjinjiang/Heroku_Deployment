@@ -11,12 +11,12 @@ while i<5000:
    if i%1000==0:
         f= open('test.txt','w')         
         f.write(f'Hello World,  {i}') 
-        f.write(r'This is our new text file1') 
-        f.write(r'and this is another line.') 
-        f.write(r'Why? Because we can.') 
+        # f.write(r'This is our new text file1') 
+        # f.write(r'and this is another line.') 
+        # f.write(r'Why? Because we can.') 
         f.close() 
 
-        subject = f"haha {i}"
+        subject = f"TeamProject test: #{i}th email"
         body = 'Hi there, I am sending this email from Heroku!'
         send_an_email('test.txt',subject=subject,body=body)
 
