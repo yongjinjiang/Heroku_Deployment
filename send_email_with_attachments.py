@@ -50,7 +50,10 @@ def send_an_email(file_name,subject="sending email with attachments",\
        s.quit()
     #except:
     #   print ("Error: unable to send email")
-    except SMTPException as error:
-          print ("Error")
+    except:
+          print ("Error in sending email")
+    finally:
+        pass
+          
 # file="..//try.html"
 # send_an_email(file)
