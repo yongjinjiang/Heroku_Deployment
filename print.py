@@ -6,7 +6,7 @@ while i<5000:
    i+=1
    print(i) 
    
-   time.sleep(3)
+   time.sleep(42)
 
    if i%1000==0:
         f= open('test.txt','w')         
@@ -16,7 +16,7 @@ while i<5000:
         # f.write(r'Why? Because we can.') 
         f.close() 
 
-        subject = f"TeamProject test: #{int(i/1000)}th email"
-        body = 'Hi there, I am sending this email from Heroku once per 3000 seconds'
+        subject = f"Heroku email to me: #{int(i/1000)}th email"
+        body = 'Hi there, I am sending this email from Heroku once per day'
         send_an_email('test.txt',subject=subject,body=body)
 
