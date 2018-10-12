@@ -38,8 +38,9 @@ def send_an_email(file_name,subject="sending email with attachments",\
     #right file format:
     part.set_payload(open(file_name, "rb").read())
     encoders.encode_base64(part)
-    part.add_header(f'Content-Disposition', f'attachment; filename={file_name}')
+    part.add_header(f'Content-Disposition', f'attachment; filename={file_name.split("/")[-1]}')
     msg.attach(part)
+
 
     try:
        s = smtplib.SMTP('smtp.gmail.com', 587)
